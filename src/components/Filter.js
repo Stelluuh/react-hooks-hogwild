@@ -1,7 +1,7 @@
 import React from 'react';
 
-function Filter({handleFilterChange}) {
-
+function Filter({ handleFilterChange, handleSortChange }) {
+    
     
 
     return(
@@ -12,6 +12,15 @@ function Filter({handleFilterChange}) {
                 onChange={e => handleFilterChange(e.target.value)}>
                 <option>Yes</option>
                 <option>No</option>
+            </select>
+            <br />
+            Sort By:
+            <select
+                name="SortBy"
+                onChange={e => handleSortChange(e.target.value)}
+            >
+                <option>name</option>
+                <option>weight</option>
             </select>
         </div>
     )
